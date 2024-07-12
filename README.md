@@ -17,7 +17,7 @@ Than you need copy `db/db.sqlite3` to `/www/bond-service/db/` or alter settings.
 
 ## Interface
 Then on http://127.0.0.1:8000/bond/api you shoud find Django REST framework web
-interface and on http://127.0.0.1:8000/docs shoud be some documentation
+interface and on http://127.0.0.1:8000/ shoud be some documentation
 
 You can login with two differnt users:
  - `admin` with pasword `admin_password`
