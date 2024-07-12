@@ -1,8 +1,8 @@
 # Bond API by Jiří Hepnar
-This project was created on Sbuntu so same commands may warry on other os
+This project was created on Ubuntu so same commands may warry on other os
 
 ## How to start service
-To start service you need to have `docker` and `docker-compose` installed
+To start service you need to have `docker` and `docker-compose` installed  
 Then it is simple:
 ```
 > sudo docker-compose build
@@ -13,7 +13,7 @@ Or you can use `Dockerfile.ci` and start it with your owns params:
 ```
 sudo docker build -t bond-api -f Dockerfile.ci . && sudo docker run -it bond-api
 ```
-Than you need copy `db/db.sqlite3` to `/www/bond-service/db/` or alter settings.py
+You need to also copy `db/db.sqlite3` to `/www/bond-service/db/` or alter settings.py
 
 ## Interface
 Then on http://127.0.0.1:8000/bond/api you shoud find Django REST framework web
@@ -38,7 +38,7 @@ You can add new emision in this format:
 ```
 
 ## Bond detail
-If you want to work(show, update, delete) with your bond, please use ISIN as bond_id
+If you want to work(show, update, delete) with your bond, please use ISIN as bond_id  
 Example:
 ```
 http://127.0.0.1:8000/bond/detail/CZ0003551251/api
