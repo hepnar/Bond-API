@@ -1,0 +1,12 @@
+FROM debian:bookworm
+
+# install runtime dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends vim procps net-tools wget python3 python3-pip python3-django python3-djangorestframework python3-markdown python3-django-filters python3-requests && \
+    pip3 install django-rest-swagger drf-yasg --break-system-packages
+
+
+COPY src/*.py /www/bond-service/server/
+COPY src/bonds_api/*.py /www/bond-service/server/bonds_api/
+
+CMD ["python3", "/www/bond-service/server/manage.py", "runserver"]
